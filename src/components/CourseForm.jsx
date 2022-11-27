@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import useCourseStore from '../app/createStore'
+import useCourseStore from '../app/courseStore'
 
 const CourseForm = () => {
 	const addCourse = useCourseStore((state) => state.addCourse)
@@ -13,6 +13,7 @@ const CourseForm = () => {
 			id: Math.ceil(Math.random() * 100000),
 			title: courseTitle
 		})
+		setCourseTitle("")
 	}
 	
 	return (
